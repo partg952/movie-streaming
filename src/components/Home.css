@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap');
+main{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#movies{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: white;
+    width:200px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 200ms ease;
+    cursor: pointer;
+
+}
+
+
+#movies:hover > span{
+    transform: translateY(0px);
+}
+
+#movies span{
+    background-color: rgb(175, 6, 175);
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: -10px;
+   transform: translateY(260px);
+    color: white;
+    transition: all 200ms ease;
+
+}
+
+#movies img{
+    height: 90%;
+    width: 100%;
+}
+#movies span h4{
+    margin-top: 10px;
+}
