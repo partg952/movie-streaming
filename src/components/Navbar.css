@@ -9,7 +9,7 @@ h1{
     cursor: pointer;
 }
 nav{
-    /* background-color: red; */
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

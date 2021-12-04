@@ -7,15 +7,24 @@ export default function Navbar({data,setData}) {
     const history = useHistory();
     const getData = (search_value) =>{
         setData([]);
-        axios(`https://api.themoviedb.org/3/search/movie/?api_key=e1fa13c7e6a35b25826f92b2aea94264&query=${search_value}`)
+        axios(`https://movie-code.herokuapp.com/search?q=`+search_value)
         .then((response)=>{
-            setData(response.data.results)
+            setData(response.data)
+            
             history.push('/')
         })
     }
     return (
         <nav>
             <p id='title' onClick={()=>{
+                setData([]);
+        axios(
+          `https://movie-code.herokuapp.com/`
+          ).then((res) => {
+              console.log(res.data);
+              setData(res.data);
+          });
+          
                 history.push('/')
             }}>Beamflix</p>   
             <div id="search">

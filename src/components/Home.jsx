@@ -14,19 +14,7 @@ export default function Home({ data, setData }) {
             return string;
         }
     }   
-  React.useEffect(() => {
-      setData([]);
-    for(let i=1;i<=5;i++){
-        axios(
-            `https://api.themoviedb.org/3/discover/movie/?api_key=e1fa13c7e6a35b25826f92b2aea94264&page=${i}`
-            ).then((res) => {
-                console.log(res.data);
-                res.data.results.forEach((i)=>{
-                    setData(prev=>[...prev,i])
-                })
-            });
-        }
-  }, []);
+  
   return (
     <div>
       <main>
@@ -34,12 +22,12 @@ export default function Home({ data, setData }) {
             data.length!=0?
             data.map((items)=>(
                 <div id='movies' onClick={()=>{
-                    history.push('/info/'+items.id)
+                    localStorage.setItem("url",items.url);
+                    history.push('/info')
                 }}>
-                <img src={`https://image.tmdb.org/t/p/w500${items.poster_path}`} alt="" />
+                <img src={items.img} alt="" />
                     <span>
                         <h4>{checkName(items.title,15)}</h4>
-                        <p>{checkName(items.overview,250)}</p>
                     </span>
                 </div>
             ))

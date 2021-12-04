@@ -21,8 +21,8 @@ main{
 }
 
 
-#movies:hover > span{
-    transform: translateY(0px);
+#movies:hover{
+    transform: scale(1.08);
 }
 
 #movies span{
