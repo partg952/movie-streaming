@@ -20,7 +20,7 @@ export default function Info() {
         
     },[])
     if(id!=undefined){
-        axios("https://movie-code.herokuapp.com/watch?id="+id+"&server=1").then(res=>{
+        axios("https://movie-code.herokuapp.com/watch?id="+id+"&server=2").then(res=>{
             setUrl(res.data)
         })
     }
