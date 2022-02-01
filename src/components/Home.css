@@ -22,11 +22,11 @@ main{
 
 
 #movies:hover{
-    transform: scale(1.08);
+    transform: scale(1.08) rotate(2deg);
 }
 
 #movies span{
-    background-color: rgb(175, 6, 175);
+    background-color: rgb(19, 18, 18);
     height: 100%;
     position: absolute;
     bottom: 0;
